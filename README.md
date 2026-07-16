@@ -12,3 +12,8 @@ XenonStore uses **Apache License**, which means you will have to credit me if yo
 
 # Credits
 I want to give credit for the huge Windows 8.x community for using my store, I appreciate you guys for using it! I also would like to give a credit to my friends who helped me with problems I experienced with XenonStore, as well as helping adding apps.
+
+# Screenshots
+<img width="1366" height="768" alt="изображение" src="https://github.com/user-attachments/assets/12c7fc80-04ff-43e2-9247-b56b461ab135" />
+<img width="1366" height="768" alt="изображение" src="https://github.com/user-attachments/assets/db4957e6-1116-4e4e-a57d-4266f065d68e" />
+<img width="1366" height="768" alt="изображение" src="https://github.com/user-attachments/assets/4e4c6d96-7628-44e8-a7cd-6f511589c8c1" />
