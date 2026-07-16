@@ -1,0 +1,393 @@
+﻿<Page
+    x:Class="XenonStore.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:XenonStore"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    <!--<Page.TopAppBar>
+        <AppBar BorderBrush="Transparent" Background="#6a6a6a"/>
+    </Page.TopAppBar>-->
+
+    <Grid Background="#F2F2F2">
+        <TextBlock Text="XenonStore" Style="{StaticResource HeaderTextStyle}" FontSize="48" Foreground="Black" Margin="90,75,0,0"/>
+        <ScrollViewer HorizontalScrollMode="Enabled" VerticalScrollMode="Disabled" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Visible" ZoomMode="Disabled" Margin="0,0,0,0">
+            <StackPanel Orientation="Horizontal" Margin="90,135,0,0">
+                <Grid Width="Auto" Margin="0,0,50,0">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Spotlight" Foreground="Black" Style="{StaticResource SubheaderTextStyle}" FontSize="24" Margin="0,0,0,15"/>
+                        <StackPanel Orientation="Horizontal" Margin="-3,0,0,0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                
+                                <GridViewItem HorizontalAlignment="Left" VerticalContentAlignment="Top" x:Name="Deezer" Tapped="Deezer_Tapped_1" Width="501.5" Background="#ce4602" Height="335">
+                                    <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                        <Image Source="https://store-images.microsoft.com/image/apps.53854.9007199266535063.6929336e-c99f-4d98-8c00-290fd3567177.f6f7a4c7-49bb-42b8-9f33-72ff729b6e98" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                        <TextBlock Text="Recipe Keeper" FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                        <TextBlock Text="Free ☆☆☆☆☆" FontSize="15" Margin="10,0,0,0"/>
+                                    </StackPanel>
+                                </GridViewItem>
+                                <StackPanel Orientation="Horizontal" Grid.Row="1">
+                                    <GridViewItem HorizontalAlignment="Left" VerticalContentAlignment="Top" x:Name="SU" Tapped="SU_Tapped_1" Width="250" Background="#8a1113" Height="165">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                            <Image Source="https://store-images.s-microsoft.com/image/apps.20414.9007199266245764.ce07487e-7d9e-4846-b816-ce1dcf043ede.f1f7f7be-b450-471f-a01f-48e4fdcd0498" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                            <TextBlock Text="CNN App for Windows" FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                            <TextBlock Text="Free ☆☆☆☆☆" FontSize="15" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                    <GridViewItem HorizontalAlignment="Left" x:Name="Fotor" Tapped="Fotor_Tapped_1" VerticalContentAlignment="Top" Width="250" Background="#e80000" Height="165">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                            <Image Source="https://store-images.microsoft.com/image/apps.54970.9007199266245259.9597cf69-fc15-4c6e-9637-52d0bdfba82e.7c9a5e43-3936-49c5-8076-cf18e061dd5c" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                            <TextBlock Text="ESPN" FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                            <TextBlock Text="Free ☆☆☆☆☆" FontSize="15" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                </StackPanel>
+                            </Grid>
+
+                            <Grid>
+                                <StackPanel Orientation="Vertical">
+                                    <GridViewItem HorizontalAlignment="Left" x:Name="CF" Tapped="CF_Tapped_1" VerticalContentAlignment="Top" Width="250" Background="#00756f" Height="165">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                            <Image Source="https://store-images.s-microsoft.com/image/apps.61330.9007199266460777.bea58bfc-32a2-474b-837a-d5dcca4ed2e8.593ff26e-5dd9-444b-915a-7b07348b2b9f" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                            <TextBlock Text="Metro Commander Pro" Foreground="White" FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                            <TextBlock Text="Free ☆☆☆☆☆" Foreground="White" FontSize="15" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                    <GridViewItem HorizontalAlignment="Left" x:Name="GBC" Tapped="GBC_Tapped_1" VerticalContentAlignment="Top" Width="250" Background="#5db12f" Height="335">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                            <Image Source="https://store-images.s-microsoft.com/image/apps.3056.9007199266388637.c9c80357-26af-4d48-aa77-bc03861df18b.2a038b89-86d8-4337-93e1-26bf973772f1" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                            <TextBlock Text="Asparion Clock"  FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                            <TextBlock Text="Free ☆☆☆☆☆" FontSize="15" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                </StackPanel>
+                            </Grid>
+                            
+                            <Grid>
+                                <StackPanel Orientation="Vertical">
+                                    <GridViewItem HorizontalAlignment="Left" x:Name="AllApps" Tapped="AllApps_Tapped_1" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" Width="165" Background="#6a6a6a" Height="165">
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="All Apps" Padding="10" FontSize="20"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                    <!--<GridViewItem HorizontalAlignment="Left" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" Width="165" Background="#6a6a6a" Height="165">
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="Collections" Padding="10" FontSize="20"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                    <GridViewItem HorizontalAlignment="Left" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" Width="165" Background="#6a6a6a" Height="165">
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="New &amp; Rising" Padding="10" FontSize="20"/>
+                                        </StackPanel>
+                                    </GridViewItem>-->
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+                <Grid Width="Auto" Margin="0,0,50,0">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Games" Foreground="Black" Style="{StaticResource SubheaderTextStyle}" FontSize="24" Margin="0,0,0,15"/>
+                        <StackPanel Orientation="Horizontal" Margin="-3,0,0,0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <GridViewItem HorizontalAlignment="Left" x:Name="FruitNinja" Tapped="FruitNinja_Tapped_1" VerticalContentAlignment="Top" Width="501.5" Background="#ffffff" Height="335">
+                                    <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                        <Image Source="https://store-images.microsoft.com/image/apps.2709.9007199266251580.180712b4-f394-49a4-8cc0-76ec7a0d1a5a.1dec10fa-0b58-4886-9495-f0e2054a1b91" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                        <TextBlock Text="Fruit Ninja" FontWeight="SemiBold" Foreground="Black" FontSize="15" Margin="10,5,0,0"/>
+                                        <TextBlock Text="Free ☆☆☆☆☆" Foreground="Black" FontSize="15" Margin="10,0,0,0"/>
+                                    </StackPanel>
+                                </GridViewItem>
+                                <StackPanel Orientation="Horizontal" Grid.Row="1">
+                                    <GridViewItem x:Name="SharkDash" Tapped="SharkDash_Tapped_1" HorizontalAlignment="Left" VerticalContentAlignment="Top" Width="250" Background="#56c8fc" Height="165">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                            <Image Source="https://store-images.microsoft.com/image/apps.25416.9007199266242712.429cfb25-ca1d-481e-b3b4-2fe8e3636409.db904799-ae8b-4e92-8823-3345ab69d51b" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                            <TextBlock Text="Shark Dash" FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                            <TextBlock Text="Free ☆☆☆☆☆" FontSize="15" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                    <GridViewItem x:Name="PFX2" Tapped="PFX2_Tapped_1" HorizontalAlignment="Left" VerticalContentAlignment="Top" Width="250" Background="#0a2634" Height="165">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                            <Image Source="https://store-images.microsoft.com/image/apps.13008.9007199266251904.6d031b5c-c435-448b-b18a-3dcdc77ca737.645b33c8-1d36-40bd-ab28-b1a015ab145c" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                            <TextBlock Text="Pinball FX2" FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                            <TextBlock Text="Free ☆☆☆☆☆" FontSize="15" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                </StackPanel>
+                            </Grid>
+
+                            <Grid>
+                                <StackPanel Orientation="Vertical">
+                                    <GridViewItem x:Name="XG" Tapped="XG_Tapped_1" HorizontalAlignment="Left" VerticalContentAlignment="Top" Width="250" Background="#008900" Height="165">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                            <Image Source="https://store-images.microsoft.com/image/apps.2808.9007199266246191.b6a646ce-1309-4a7f-b1f1-5a5c7a63adef.0b46265b-f5a4-47e1-a786-2fb1988ad3fb" Stretch="UniformToFill" Width="Auto" Height="104" VerticalAlignment="Top"/>
+                                            <TextBlock Text="Xbox Games" Foreground="White" FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                            <TextBlock Text="Free ☆☆☆☆☆" Foreground="White" FontSize="15" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                    <GridViewItem x:Name="JJ" Tapped="JJ_Tapped_1" HorizontalAlignment="Left" VerticalContentAlignment="Top" Width="250" Background="#ffffff" Height="335">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                            <Image Source="https://store-images.microsoft.com/image/apps.31820.9007199266251579.0b94f097-2fdd-462d-83cf-fea3729dd9cd.bf1042cc-1f35-41a3-a33a-1f9f35c390ee" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                            <TextBlock Text="Jetpack Joyride" Foreground="Black" FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                            <TextBlock Text="Free ☆☆☆☆☆" FontSize="15" Foreground="Black" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                </StackPanel>
+                            </Grid>
+
+                            <Grid>
+                                <StackPanel Orientation="Vertical">
+                                    <GridViewItem x:Name="GamesSeeAll" Tapped="GamesSeeAll_Tapped_1" HorizontalAlignment="Left" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" Width="165" Background="#6a6a6a" Height="165">
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="See All" Padding="10" FontSize="20"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Width="Auto" Margin="0,0,50,0">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="News + Weather" Foreground="Black" Style="{StaticResource SubheaderTextStyle}" FontSize="24" Margin="0,0,0,15"/>
+                        <StackPanel Orientation="Horizontal" Margin="-3,0,0,0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <GridViewItem Tapped="FX_Tapped_1" HorizontalAlignment="Left" VerticalContentAlignment="Top" Width="501.5" Background="#000000" Height="335">
+                                    <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                        <Image Source="https://store-images.s-microsoft.com/image/apps.16309.9007199266244463.c6dc036e-f27d-430b-9e33-4ceb6074b010.79245f94-3e88-427d-af2e-7ed847c7145d" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                        <TextBlock Text="FX Networks" FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                        <TextBlock Text="Free ☆☆☆☆☆" FontSize="15" Margin="10,0,0,0"/>
+                                    </StackPanel>
+                                </GridViewItem>
+                                <StackPanel Orientation="Horizontal" Grid.Row="1">
+                                    <GridViewItem Tapped="Foreca_Tapped_1"  HorizontalAlignment="Left" VerticalContentAlignment="Top" Width="250" Background="#4f9daf" Height="165">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                            <Image Source="https://store-images.microsoft.com/image/apps.18518.9007199266244265.641b82e5-da85-49dc-8509-67b4c8ce9996.1f188a5c-caa9-4eac-8420-9b234ea2ebd0" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                            <TextBlock Text="Foreca Weather" FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                            <TextBlock Text="Free ☆☆☆☆☆" FontSize="15" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                    <GridViewItem Tapped="Newser_Tapped_1" HorizontalAlignment="Left" VerticalContentAlignment="Top" Width="250" Background="#17130f" Height="165">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                            <Image Source="https://store-images.microsoft.com/image/apps.58131.9007199266445903.7269c767-5694-4cc6-8db1-18adcfcef38a.aaed4dbb-b332-479a-9dcb-0008f14395cf" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                            <TextBlock Text="Newser" FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                            <TextBlock Text="Free ☆☆☆☆☆" FontSize="15" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                </StackPanel>
+                            </Grid>
+
+                            <Grid>
+                                <StackPanel Orientation="Vertical">
+                                    <GridViewItem Tapped="Accu_Tapped_1" HorizontalAlignment="Left" VerticalContentAlignment="Top" Width="250" Background="#f05513" Height="165">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                            <Image Source="https://store-images.s-microsoft.com/image/apps.60935.9007199266244209.53fc4383-d535-4712-8b37-d2b16709fda1.0d7efa87-4f0d-4e11-ad82-70c6566d37c2" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                            <TextBlock Text="AccuWeather" Foreground="White" FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                            <TextBlock Text="Free ☆☆☆☆☆" Foreground="White" FontSize="15" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                    <GridViewItem Tapped="SU_Tapped_1" HorizontalAlignment="Left" VerticalContentAlignment="Top" Width="250" Background="#8a1113" Height="335">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                            <Image Source="https://store-images.s-microsoft.com/image/apps.38891.9007199266245764.939209c4-1fb4-49a0-a36b-f4235e49d32e.f40229a8-62bf-4c96-9e33-87281d428524" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                            <TextBlock Text="CNN App for Windows"  FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                            <TextBlock Text="Free ☆☆☆☆☆" FontSize="15" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                </StackPanel>
+                            </Grid>
+
+                            <Grid>
+                                <StackPanel Orientation="Vertical">
+                                    <GridViewItem HorizontalAlignment="Left" Tapped="NewsSeeAll_Tapped_1" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" Width="165" Background="#6a6a6a" Height="165">
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="See All" Padding="10" FontSize="20"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                    <!--<GridViewItem HorizontalAlignment="Left" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" Width="165" Background="#6a6a6a" Height="165">
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="Collections" Padding="10" FontSize="20"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                    <GridViewItem HorizontalAlignment="Left" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" Width="165" Background="#6a6a6a" Height="165">
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="New &amp; Rising" Padding="10" FontSize="20"/>
+                                        </StackPanel>
+                                    </GridViewItem>-->
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Width="Auto" Margin="0,0,50,0">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Music + Audio" Foreground="Black" Style="{StaticResource SubheaderTextStyle}" FontSize="24" Margin="0,0,0,15"/>
+                        <StackPanel Orientation="Horizontal" Margin="-3,0,0,0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <GridViewItem Tapped="iHeart_Tapped_1" HorizontalAlignment="Left" VerticalContentAlignment="Top" Width="501.5" Background="#a52b2c" Height="335">
+                                    <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                        <Image Source="/Assets/iheart-hero.huge.png" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                        <TextBlock Text="iHeartRadio" FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                        <TextBlock Text="Free ☆☆☆☆☆" FontSize="15" Margin="10,0,0,0"/>
+                                    </StackPanel>
+                                </GridViewItem>
+                                <StackPanel Orientation="Horizontal" Grid.Row="1">
+                                    <GridViewItem Tapped="NRJ_Tapped_1" HorizontalAlignment="Left" VerticalContentAlignment="Top" Width="250" Background="#ffffff" Height="165">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                            <Image Source="https://store-images.microsoft.com/image/apps.42815.9007199266246520.b7405ede-d029-46bd-8eaa-1fad1395d6e6.3b097238-2e70-45fc-8032-75d07c7c5afe" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                            <TextBlock Text="NRJ" Foreground="Black" FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                            <TextBlock Text="Free ☆☆☆☆☆" Foreground="Black" FontSize="15" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                    <GridViewItem Tapped="XBM_Tapped_1" HorizontalAlignment="Left" VerticalContentAlignment="Top" Width="250" Background="#d24726" Height="165">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                            <Image Source="/Assets/spotlite-hero.thin(1).png" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                            <TextBlock Text="Xbox Music" FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                            <TextBlock Text="Free ☆☆☆☆☆" FontSize="15" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                </StackPanel>
+                            </Grid>
+
+                            <Grid>
+                                <StackPanel Orientation="Vertical">
+                                    <GridViewItem Tapped="Spotlite_Tapped_1" HorizontalAlignment="Left" VerticalContentAlignment="Top" Width="250" Background="#ffffff" Height="165">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                            <Image Source="/Assets/spotlite-hero.thin.png" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                            <TextBlock Text="Spotlite - Listen to Spotify" Foreground="Black" FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                            <TextBlock Text="Free ☆☆☆☆☆" Foreground="Black" FontSize="15" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                    <GridViewItem Tapped="Deezerr_Tapped_1" HorizontalAlignment="Left" VerticalContentAlignment="Top" Width="250" Background="#2c2c2c" Height="335">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                            <Image Source="https://store-images.microsoft.com/image/apps.31297.9007199266242716.f0650ac9-5c1f-48e6-b9f9-38a7d346a281.477e933d-90f2-41c6-9dd6-c7cc64eedf23" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                            <TextBlock Text="Deezer"  FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                            <TextBlock Text="Free ☆☆☆☆☆" FontSize="15" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                </StackPanel>
+                            </Grid>
+
+                            <Grid>
+                                <StackPanel Orientation="Vertical">
+                                    <GridViewItem HorizontalAlignment="Left" Tapped="MusicSeeAll_Tapped_1" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" Width="165" Background="#6a6a6a" Height="165">
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="See All" Padding="10" FontSize="20"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                    <!--<GridViewItem HorizontalAlignment="Left" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" Width="165" Background="#6a6a6a" Height="165">
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="Collections" Padding="10" FontSize="20"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                    <GridViewItem HorizontalAlignment="Left" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" Width="165" Background="#6a6a6a" Height="165">
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="New &amp; Rising" Padding="10" FontSize="20"/>
+                                        </StackPanel>
+                                    </GridViewItem>-->
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Width="Auto" Margin="0,0,50,0">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Video + Entertainment" Foreground="Black" Style="{StaticResource SubheaderTextStyle}" FontSize="24" Margin="0,0,0,15"/>
+                        <StackPanel Orientation="Horizontal" Margin="-3,0,0,0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <GridViewItem Tapped="VLC_Tapped_1" HorizontalAlignment="Left" VerticalContentAlignment="Top" Width="501.5" Background="#f58300" Height="335">
+                                    <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                        <Image Source="/Assets/vlc-hero.huge.png" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                        <TextBlock Text="VLC for Windows 8" FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                        <TextBlock Text="Free ☆☆☆☆☆" FontSize="15" Margin="10,0,0,0"/>
+                                    </StackPanel>
+                                </GridViewItem>
+                                <StackPanel Orientation="Horizontal" Grid.Row="1">
+                                    <GridViewItem Tapped="Nick_Tapped_1" HorizontalAlignment="Left" VerticalContentAlignment="Top" Width="250" Background="#ffffff" Height="165">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                            <Image Source="https://store-images.s-microsoft.com/image/apps.9480.9007199266248676.22647a4e-cc6f-4b1f-a345-6eb9ba3eb0f6.64edd68c-d9d3-447c-a0a8-88eab267c84f" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                            <TextBlock Text="Nick" Foreground="Black" FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                            <TextBlock Text="Free ☆☆☆☆☆" Foreground="Black" FontSize="15" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                    <GridViewItem Tapped="SmartGlass_Tapped_1" HorizontalAlignment="Left" VerticalContentAlignment="Top" Width="250" Background="#008a00" Height="165">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                            <Image Source="/Assets/smartglass-hero.thin.png" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                            <TextBlock Text="Xbox 360 SmartGlass" FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                            <TextBlock Text="Free ☆☆☆☆☆" FontSize="15" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                </StackPanel>
+                            </Grid>
+
+                            <Grid>
+                                <StackPanel Orientation="Vertical">
+                                    <GridViewItem Tapped="Flixster_Tapped_1" HorizontalAlignment="Left" VerticalContentAlignment="Top" Width="250" Background="#08457b" Height="165">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                            <Image Source="https://store-images.s-microsoft.com/image/apps.55275.9007199266244090.f6b27398-b320-43b4-a5ca-b3a1af02ec62.083bb1d2-b213-4b6b-a0d1-7c5d7021b7d7" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                            <TextBlock Text="Flixster" Foreground="White" FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                            <TextBlock Text="Free ☆☆☆☆☆" Foreground="White" FontSize="15" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                    <GridViewItem Tapped="Particle_Tapped_1" HorizontalAlignment="Left" VerticalContentAlignment="Top" Width="250" Background="#47342d" Height="335">
+                                        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                            <Image Source="https://store-images.microsoft.com/image/apps.23310.9007199266658933.63bf2a33-d78a-464a-84fa-ab4cad7eea86.86dca261-d477-4302-ab65-0584a0a9387c" Stretch="UniformToFill" Width="Auto" Height="Auto" VerticalAlignment="Top"/>
+                                            <TextBlock Text="Particle System"  FontWeight="SemiBold" FontSize="15" Margin="10,5,0,0"/>
+                                            <TextBlock Text="Free ☆☆☆☆☆" FontSize="15" Margin="10,0,0,0"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                </StackPanel>
+                            </Grid>
+
+                            <Grid>
+                                <StackPanel Orientation="Vertical">
+                                    <GridViewItem HorizontalAlignment="Left" Tapped="VideoSeeAll_Tapped_1" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" Width="165" Background="#6a6a6a" Height="165">
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="See All" Padding="10" FontSize="20"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                    <!--<GridViewItem HorizontalAlignment="Left" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" Width="165" Background="#6a6a6a" Height="165">
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="Collections" Padding="10" FontSize="20"/>
+                                        </StackPanel>
+                                    </GridViewItem>
+                                    <GridViewItem HorizontalAlignment="Left" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left" Width="165" Background="#6a6a6a" Height="165">
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="New &amp; Rising" Padding="10" FontSize="20"/>
+                                        </StackPanel>
+                                    </GridViewItem>-->
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

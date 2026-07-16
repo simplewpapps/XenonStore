@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="XenonStore.AppDetails"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:XenonStore"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#F2F2F2">
+        <Button Style="{StaticResource BackButtonStyle}" VerticalAlignment="Top" Tapped="Button_Tapped_1" Background="Black" Margin="25,78,0,0" Foreground="Black" BorderBrush="Black"/>
+        <StackPanel Orientation="Vertical" Margin="90,75,0,0">
+            <TextBlock Text="{Binding Name}" Style="{StaticResource HeaderTextStyle}" FontSize="48" Foreground="Black" Margin="0,0,0,30"/>
+            <StackPanel VerticalAlignment="Top" Orientation="Horizontal">
+                <Grid Background="#6a6a6a" Width="400" HorizontalAlignment="Left" Height="500">
+                    <StackPanel Orientation="Vertical" Margin="15,15,0,0">
+                        <Border Width="75" Height="75" Background="Gray" HorizontalAlignment="Left" Margin="0,0,0,10">
+                            <Image Source="{Binding IconUrl}" Stretch="UniformToFill"/>
+                        </Border>
+                        <TextBlock Text="☆☆☆☆☆" FontSize="32" FontWeight="Light"/>
+                        <TextBlock Text="Free" FontSize="24" FontWeight="Light"/>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <Button BorderBrush="White" x:Name="InstallButton" IsEnabled="True" Tapped="Button_Tapped_2" Foreground="White" Content="Install" Margin="-2,5,15,0"/>
+                            <ProgressRing Foreground="White" IsActive="True" x:Name="LoadingRing" Margin="0,0,10,0"  Visibility="Collapsed"/>
+                            <ProgressBar x:Name="DownloadProgress" Foreground="White" Width="200" Visibility="Collapsed"/>
+                        </StackPanel>
+                        <TextBlock Margin="0,0,15,0" Text='By clicking "Install", you agree that this application may use some of the permissions to operate properly on your PC.' TextWrapping="Wrap" FontSize="14" FontWeight="SemiLight"/>
+                    </StackPanel>
+                    <StackPanel Margin="15,15,15,15" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <TextBlock Text="Publisher:" Foreground="White" FontSize="14" Margin="0,0,5,0"/>
+                            <TextBlock Text="{Binding Publisher}" FontWeight="SemiBold" Foreground="White" FontSize="14"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <TextBlock Text="Type:" Foreground="White" FontSize="14" Margin="0,0,5,0"/>
+                            <TextBlock Text="{Binding Type}" FontWeight="SemiBold" Foreground="White" FontSize="14"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <TextBlock Text="Category:" Foreground="White" FontSize="14" Margin="0,0,5,0"/>
+                            <TextBlock Text="{Binding Category}" FontWeight="SemiBold" Foreground="White" FontSize="14"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                            <TextBlock Text="Version:" Foreground="White" FontSize="14" Margin="0,0,5,0"/>
+                            <TextBlock Text="{Binding Version}" FontWeight="SemiBold" Foreground="White" FontSize="14"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+                <StackPanel Orientation="Vertical" Margin="20,0,0,0">
+                    <TextBlock Text="Description" Margin="0,0,0,5" FontSize="24" Foreground="Black" FontWeight="Light"/>
+                    <TextBlock Text="{Binding Description}" Margin="0,0,0,0" Width="800" TextWrapping="Wrap" FontSize="18" Foreground="Gray" FontWeight="SemiLight"/>
+                </StackPanel>               
+            </StackPanel>      
+        </StackPanel>
+    </Grid>
+</Page>

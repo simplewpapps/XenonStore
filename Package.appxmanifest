@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="MSNMoneyAppsProduction.XenonStore" Publisher="CN=MSN Money Apps Production" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>XenonStore</DisplayName>
+    <PublisherDisplayName>MSN Money Apps Production</PublisherDisplayName>
+    <Logo>Assets\Logos\xs_store.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="XenonStore.App">
+      <VisualElements DisplayName="XenonStore" Logo="Assets\Logos\xs_medium.png" SmallLogo="Assets\Logos\xs_small.png" Description="XenonStore" ForegroundText="light" BackgroundColor="#6a6a6a" ToastCapable="true">
+        <DefaultTile ShowName="allLogos" ShortName="XenonStore" WideLogo="Assets\Logos\xs_wide.png" />
+        <SplashScreen Image="Assets\Logos\xs_splash.png" BackgroundColor="#6a6a6a" />
+        <InitialRotationPreference>
+          <Rotation Preference="portrait" />
+          <Rotation Preference="landscape" />
+          <Rotation Preference="portraitFlipped" />
+          <Rotation Preference="landscapeFlipped" />
+        </InitialRotationPreference>
+      </VisualElements>
+      <Extensions>
+        <Extension Category="windows.search" Executable="XenonStore.exe" EntryPoint="XenonStore.App" />
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="picturesLibrary" />
+    <Capability Name="internetClientServer" />
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

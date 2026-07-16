@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="XenonStore.AllAppsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:XenonStore"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}">
+
+    <Grid Background="#F2F2F2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="180"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Style="{StaticResource BackButtonStyle}" VerticalAlignment="Top" Grid.Row="0"  Tapped="Button_Tapped_1" Background="Black" Margin="25,78,0,0" Foreground="Black" BorderBrush="Black"/>
+        <StackPanel Grid.Row="0" Orientation="Vertical" Margin="90,75,0,0">
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,30">
+                <TextBlock Text='All Apps' x:Name="Label" Style="{StaticResource HeaderTextStyle}" FontSize="48" Foreground="Black" Margin="0,0,15,0"/>
+                <TextBlock x:Name="AppsCountLabel" Style="{StaticResource HeaderTextStyle}" FontSize="28" Foreground="#FF767676" Margin="0,0,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <ComboBox x:Name="TypeBox" SelectionChanged="TypeBox_SelectionChanged_1" Loaded="TypeBox_Loaded_1" SelectedItem="0" BorderBrush="Gray" Margin="0,0,20,0">
+                    <ComboBoxItem Content="All types"/>
+                    <ComboBoxItem Content="App"/>
+                    <ComboBoxItem Content="Game"/>
+                </ComboBox>
+                <ComboBox x:Name="CategoryBox" SelectionChanged="CategoryBox_SelectionChanged_1" Loaded="CategoryBox_Loaded_1" SelectedItem="0" BorderBrush="Gray" Margin="0,0,20,0">
+                    <ComboBoxItem Content="All categories"/>
+                </ComboBox>
+            </StackPanel>
+        </StackPanel>
+        
+
+        <ScrollViewer Grid.Row="1" Margin="0,0,0,0" IsHitTestVisible="True" HorizontalScrollMode="Enabled" VerticalScrollMode="Disabled" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Visible" ZoomMode="Disabled">
+            <GridView Background="Transparent" ScrollViewer.HorizontalScrollMode="Disabled" ScrollViewer.VerticalScrollMode="Disabled" x:Name="MainGrid" Margin="90,20,0,30" ItemsSource="{Binding Apps}" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionMode="None">
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Width="300" Height="90" Tapped="Grid_Tapped_1">
+                            <StackPanel Orientation="Horizontal">
+                                <Border Background="Gray" Height="90" Width="90" HorizontalAlignment="Left">
+                                    <Image Source="{Binding IconUrl}" Stretch="UniformToFill"/>
+                                </Border>
+                                <StackPanel Orientation="Vertical" Margin="10,0,0,0" VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding Name}" TextWrapping="Wrap" FontSize="16" Width="125" HorizontalAlignment="Left" Foreground="Black" Margin="0,0,0,0"/>
+                                    <TextBlock Text="{Binding Publisher}" TextWrapping="Wrap" FontSize="12" Foreground="Black"/>
+                                    <TextBlock Text="{Binding Category}" TextWrapping="Wrap" FontSize="12" Foreground="Black"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+        </ScrollViewer>
+       
+    </Grid>
+</Page>
